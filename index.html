@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark" data-session="off">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EITT Ransomware Lab — Ordinateur virtuel et simulation d'attaque</title>
+  <meta name="description" content="EITT Ransomware Lab : un ordinateur virtuel (EITT OS) pour comprendre une attaque par ransomware, entièrement simulée dans le navigateur. Aucun vrai fichier n'est touché, rien n'est envoyé sur Internet.">
+  <meta name="theme-color" content="#050a14">
+  <link rel="icon" type="image/png" href="assets/logo/eitt-mark-64.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/applications.css">
+  <link rel="stylesheet" href="css/ransomware.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Bureau (caché tant qu'on n'est pas connecté) -->
+    <div id="desktop" class="is-off" aria-hidden="true" inert>
+      <div class="wallpaper-layer"></div>
+      <div id="icon-layer" class="icon-layer" role="group" aria-label="Icônes du bureau"></div>
+      <div id="windows-layer" class="windows-layer"></div>
+      <div id="start-menu" class="start-menu" role="dialog" aria-label="Menu Démarrer" hidden></div>
+      <div id="toast-root" class="toast-root" aria-live="polite"></div>
+      <div id="sim-banner" class="sim-banner" hidden role="status"></div>
+      <footer id="taskbar" class="taskbar" aria-label="Barre des tâches"></footer>
+    </div>
+    <!-- Écrans de session : démarrage, connexion, verrouillage, veille, arrêt -->
+    <div id="screen-root"></div>
+    <!-- Menus contextuels et boîtes de dialogue simulés -->
+    <div id="overlay-root"></div>
+  </div>
+
+  <noscript>
+    <div class="noscript">
+      <h1>EITT Ransomware Lab</h1>
+      <p>Cette simulation d'ordinateur fonctionne avec JavaScript. Activez JavaScript dans votre navigateur puis rechargez la page.</p>
+    </div>
+  </noscript>
+
+  <!-- Ordre important : utilitaires, données, noyau (icônes, fichiers, sauvegarde, interface), applications, bureau, session, démarrage. -->
+  <script src="js/utils.js"></script>
+  <script src="data/initial-files.js"></script>
+  <script src="data/websites.js"></script>
+  <script src="data/boss-knowledge.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/filesystem.js"></script>
+  <script src="js/persistence.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/window-manager.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/system-monitor.js"></script>
+  <script src="js/viewer.js"></script>
+  <script src="js/explorer.js"></script>
+  <script src="js/notepad.js"></script>
+  <script src="js/downloads.js"></script>
+  <script src="js/sites.js"></script>
+  <script src="js/browser.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/desktop.js"></script>
+  <script src="js/tray.js"></script>
+  <script src="js/ransomware.js"></script>
+  <script src="js/boss-ai.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/session.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

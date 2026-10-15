@@ -1,0 +1,15 @@
+Tests automatisés d'EITT Ransomware Lab
+=======================================
+
+Ces tests ne sont pas nécessaires pour utiliser l'application : ouvrez simplement index.html.
+
+Pour les rejouer (Node.js + Playwright + un Chromium installés) :
+
+    cd tests
+    node e2e.js
+
+Le script ouvre index.html en file:// dans un vrai navigateur, joue le parcours complet
+(connexion sans mot de passe avec deux sessions, bureau, modules de la barre des tâches et batterie en direct, fichiers virtuels, EITT Chat et message du
+patron, attaque simulée, réponse à incident, restauration, cas d'échec, mobile, animations réduites) et analyse le code source (aucun eval, fetch, XMLHttpRequest, API de fichiers
+du navigateur…). Environ 333 vérifications (dont la notification du patron 2 à 5 s après la connexion et le verrouillage, l’alerte « On se fait pirater ! » en pleine attaque et le retour à la session après l’exercice). Les captures d'écran sont écrites dans le dossier temporaire du système
+(variable RL_SHOTS pour choisir un autre dossier).
